@@ -1,0 +1,16 @@
+ if guess not in word: 
+            attempts -= 1
+            print(f"Неправильно! Осталось попыток: {attempts}")
+        else:
+            print("Правильно!")
+
+        if all(letter in guessed_letters for letter in word):  # Проверка на выигрыш
+            print(f"Поздравляем! Вы угадали слово: {word}")
+            break
+    else:
+        print(display_hangman(attempts))
+        print(f"Вы проиграли! Загаданное слово было: {word}")
+
+
+# Запуск игры
+hangman()
