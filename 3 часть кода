@@ -1,0 +1,11 @@
+# Главная функция игры
+def hangman():    global attempts
+    while attempts > 0:        print(display_hangman(attempts))
+        print(display_word())        guess = input("Введите букву: ").lower()
+        # Проверка на ввод
+        if len(guess) != 1 or not guess.isalpha():            print("Пожалуйста, вводите только одну букву.")
+            continue
+        if guess in guessed_letters:            print("Вы уже угадывали эту букву.")
+            continue
+        guessed_letters.append(guess)  # Добавляем букву в список угаданных
+        if guess not in word:
