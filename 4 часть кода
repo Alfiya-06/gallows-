@@ -4,7 +4,7 @@
         else:
             print("Правильно!")
 
-        if all(letter in guessed_letters for letter in word):  # Проверка на выигрыш
+        if all(letter in guessed_letters for letter in word):  #  Проверка на выигрыш
             print(f"Поздравляем! Вы угадали слово: {word}")
             break
     else:
